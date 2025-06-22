@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: crimson;
+    text-shadow: 0 0 10px #fff;
+}
+
+.form-box {
+    background: #ffffffcc;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(220, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.form-box:hover {
+    transform: scale(1.03);
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #c2185b;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 1em;
+    background: #f8f8f8;
+    color: #222;
+}
+
+input[type="submit"] {
+    background: crimson;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: #e53935;
+    transform: scale(1.02);
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.2em;
+    animation: pop 1s ease-in-out;
+}
+
+.result .emoji {
+    font-size: 3rem;
+    animation: bounce 0.8s ease infinite alternate;
+}
+
+.result .category {
+    font-size: 2rem;
+    color: crimson;
+    margin-top: 10px;
+}
+
+.result .message {
+    color: #d50000;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.advice {
+    background: #fff1f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    color: #880e4f;
+    text-align: left;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.advice h3 {
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
